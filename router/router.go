@@ -8,10 +8,11 @@ import (
 
 func Router() *mux.Router {
 	router := mux.NewRouter()
+
 	router.HandleFunc("/", controller.GetMyAllMovies).Methods("GET")
 	router.HandleFunc("/", controller.CreateMovie).Methods("POST")
-	router.HandleFunc("/{}", controller.MarkAsWatched).Methods("PUT")
-	router.HandleFunc("/{}", controller.DeleteOneMovie).Methods("DELETE")
+	router.HandleFunc("/{id}", controller.DeleteOneMovie).Methods("DELETE")
+	router.HandleFunc("/{id}", controller.MarkAsWatched).Methods("PUT")
 	return router
 
 }

@@ -42,7 +42,10 @@ func UpdateOneMovie(movieId string) {
 func DeleteOneMovie(moviesId string) {
 	id, _ := primitive.ObjectIDFromHex((moviesId))
 	filter := bson.M{"_id": id}
-	deleteCount, _ := collection.DeleteOne(context.Background(), filter)
+	deleteCount, err := collection.DeleteOne(context.Background(), filter)
+	if err != nil {
+		fmt.Println("Error in helper block")
+	}
 	fmt.Println("Movie gor delete with delete count: ", deleteCount)
 }
 
