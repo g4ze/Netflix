@@ -30,3 +30,10 @@ func MarkAsWatched(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(params["id"])
 
 }
+func DeleteOneMovie(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content Type", "controlleeerrrr")
+	w.Header().Set("Allow-Control-Allow-Methods", "DELETE")
+	params := mux.Vars(r)
+	helper.DeleteOneMovie(params["id"])
+	json.NewEncoder(w).Encode(params["id"])
+}

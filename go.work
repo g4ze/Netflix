@@ -1,8 +1,10 @@
 go 1.18
 
 use (
+	.
 	./controller
 	./dbconnect
 	./dbhelper
 	./model
+	./router
 )
