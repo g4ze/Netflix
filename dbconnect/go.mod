@@ -1,3 +1,3 @@
-module dbconnect
+module connections
 
 go 1.18

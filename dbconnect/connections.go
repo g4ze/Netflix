@@ -14,7 +14,7 @@ const dbName = "netflix"
 const colName = "watchList"
 
 // making a connection now
-var collection *mongo.Collection
+var Collection *mongo.Collection
 
 func init() {
 	//client oprions
@@ -26,6 +26,6 @@ func init() {
 	}
 	fmt.Println("connectoion established")
 
-	collection = client.Database(dbName).Collection(colName)
+	Collection = client.Database(dbName).Collection(colName)
 	fmt.Print("collection instance is ready")
 }
