@@ -1,2 +1,2 @@
 # Netflix
-Netflix api. Uses mongoDB online
+Netflix api. Uses mongoDB Atlas
